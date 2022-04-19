@@ -12,7 +12,7 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
-
+/* Main container style */
 .container{
   width: 70%;
   margin: 0 auto;
@@ -20,7 +20,7 @@ code {
   display: flex;
   justify-content: center;
 }
-
+/* A div for the question */
 .questionDiv{
   display: flex;
   flex-direction: column;
@@ -31,7 +31,7 @@ code {
   background: linear-gradient(90deg, rgba(45,253,251,1) 0%, rgba(195,34,40,1) 100%);
   width: 50%;
 }
-
+/* A div for the answers */
 .answersDiv{
   display: flex;
   flex-direction: column;
@@ -42,13 +42,13 @@ code {
   background: linear-gradient(90deg, rgba(195,34,40,1) 0%, rgba(45,253,251,1) 100%);
   width: 50%;
 }
-
+/* Each answer */
 .answer{
   margin: 1vw;
   padding: 1vw;
   background-color: yellow;
 }
-
+/* For the ending message */
 .end{
   display: flex;
   justify-content: center;
@@ -58,6 +58,7 @@ code {
   background: linear-gradient(90deg, rgba(34,195,36,1) 0%, rgba(45,253,251,1) 100%);
   width: 70%;
 }
+/* The message itself */
 .endmsg{
   padding: 0.5vw;
 
