@@ -47,13 +47,16 @@ function App() {
   ]
   // Index of the current question
   const [currentIndex, setCurrentIndex] = useState(0);
-  // Number of correct answers
-  const [corrects, setCorrects] = useState(0);
+  // Correct answer indexes
+  const [corrects, setCorrects] = useState([]);
 
   // Check if the answer is right 
   const handleAnswer = (answer) => {
     if(answer == questions[currentIndex].right)
-        setCorrects(corrects + 1);
+        setCorrects([...corrects, true]);
+    else
+        setCorrects([...corrects, false]);
+        
     setCurrentIndex(currentIndex + 1);
   }
   // Main
@@ -83,10 +86,22 @@ function App() {
           ):
           (
             // End of the quiz message
-            <div className="end">
-              <p className="endmsg">Крај квиза!</p>
-              <p className="endmsg">Број тачних: {corrects}</p>
-            </div>
+            <>
+              <div className="end">
+                <p className="endmsg">Крај квиза!</p>
+                <p className="endmsg">Број тачних: {corrects}</p>
+              </div>
+              <div className="end">
+                {
+                  // Each answer and its truity
+                  corrects.map((item, index) => (
+                        <p>
+                          {`Питање број ${index + 1}: ${item ? ('Тачан одговор!') : (`Нетачно! тачан одговор је: ${questions[index].answers[questions[index].right - 1]}`)}`}
+                        </p>
+                  ))
+                }
+              </div>
+            </>
           )
         }
       </div>
