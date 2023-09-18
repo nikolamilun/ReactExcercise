@@ -27,9 +27,15 @@ code {
   justify-content: center;
   padding: 5vw;
   border: 2px solid red;
-  background: rgb(45,253,251);
-  background: linear-gradient(90deg, rgba(45,253,251,1) 0%, rgba(195,34,40,1) 100%);
+  background: linear-gradient(90deg, rgb(45,253,251) 0%, rgb(13, 171, 192) 100%);
   width: 50%;
+  border-radius: 10px 10px;
+}
+.questionDiv p{
+  background-color: rgb(172, 34, 34);
+  border-radius: 3px 3px;
+  color: white;
+  font-size: 3vw;
 }
 /* A div for the answers */
 .answersDiv{
@@ -38,15 +44,17 @@ code {
   justify-content: center;
   padding: 5vw;
   border: 2px solid red;
-  background: rgb(195,34,40);
-  background: linear-gradient(90deg, rgba(195,34,40,1) 0%, rgba(45,253,251,1) 100%);
+  background: linear-gradient(90deg, rgb(13, 171, 192) 0%, rgb(45,253,251)  100%);
+  border-radius: 10px 10px;
   width: 50%;
 }
 /* Each answer */
 .answer{
   margin: 1vw;
   padding: 1vw;
-  background-color: yellow;
+  background-color: rgb(238, 238, 64);
+  border-radius: 5px 5px;
+  font-size: 2vw;
 }
 /* For the ending message */
 .end{
